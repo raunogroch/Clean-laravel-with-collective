@@ -38,7 +38,7 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Updated by ranr</div>
+                <div class="title">Updated by R.A.N.R.</div>
             </div>
         </div>
     </body>
