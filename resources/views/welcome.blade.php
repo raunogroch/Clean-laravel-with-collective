@@ -38,7 +38,8 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Updated by R.A.N.R.</div>
+                <div class="title">You're {{ auth()->user()->roles->name }} {{ auth()->user()->name }}</div>
+                <h1><a href="{{ url('logout') }}">Salir</a></h1>
             </div>
         </div>
     </body>

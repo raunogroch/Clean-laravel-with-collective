@@ -2,6 +2,8 @@
 
 namespace App\Http;
 
+use App\Http\Middleware\Administrator;
+use App\Http\Middleware\Player;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -29,5 +31,8 @@ class Kernel extends HttpKernel
         'auth' => \App\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
+
+        'administrator' => Administrator::class,
+        'player' => Player::class,
     ];
 }

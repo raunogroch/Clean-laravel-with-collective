@@ -16,10 +16,18 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('email')->unique();
+            $table->integer('role_id')->default(2);
             $table->string('password', 60);
             $table->rememberToken();
             $table->timestamps();
         });
+
+        DB::table('users')->insert([
+            'name'  => 'Administrator',
+            'email'     => 'admin@admin.com',
+            'role_id' => '1',
+            'password'  => bcrypt('admin123')
+        ]);
     }
 
     /**
