@@ -20,15 +20,14 @@ Route::get('register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 Route::group(['middleware' => ['auth','administrator'], 'prefix'=> 'administrator'], function () {
-    Route::get('/',function(){
-        return view('welcome');
+    Route::get('/', function (){
+        return view('admin/index');
     });
+    Route::resource('bets','BetController');
 });
 
 Route::group(['middleware' => ['auth','player'], 'prefix'=> 'player'], function () {
     Route::get('/',function(){
-        return view('welcome');
+        return 'Hola';
     });
 });
-
-

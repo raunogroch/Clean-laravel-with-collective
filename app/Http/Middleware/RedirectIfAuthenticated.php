@@ -23,9 +23,9 @@ class RedirectIfAuthenticated
                 case 'player':
                     return redirect()->to('player');
                     break;
-//                default :
-//                    return redirect()->to('/login');
-//                    break;
+                default :
+                    return redirect()->to('login');
+                    break;
             }
         }
         return $next($request);
