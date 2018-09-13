@@ -15,6 +15,7 @@ class CreateBetsTable extends Migration
         Schema::create('bets', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('gender_id');
+            $table->integer('user_id');
             $table->string('name');
             $table->string('description');
             $table->integer('time');
