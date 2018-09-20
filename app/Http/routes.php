@@ -23,6 +23,7 @@ Route::group(['middleware' => ['auth','administrator'], 'prefix'=> 'administrato
     Route::get('/', function (){
         return view('admin/index');
     });
+    Route::resource('profile','ProfileController');
     Route::resource('bets','BetController');
 });
 

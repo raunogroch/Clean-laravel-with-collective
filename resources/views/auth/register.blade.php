@@ -46,6 +46,14 @@
                     </div>
                 </div>
 
+                <div class="form-group">
+                    {!! Form::label('gender_id', 'Gender: ', ['class' => 'col-sm-3 control-label']) !!}
+                    <div class="col-sm-9">
+                        {!! Form::select('gender_id', [null => 'Please select a gender'] + [ 1 => 'MALE', 2 => 'FEMALE'] , null, array('class' => 'form-control', 'required')) !!}
+                    </div>
+                </div>
+
+
                 <div class="form-group push-up-30">
                     <div class="col-md-6">
                         <a href="{{ url('/') }}" class="btn btn-link btn-block">Already have account?</a>
@@ -69,30 +77,6 @@
     </div>
 
 </div>
-
-<!-- COUNTERS // NOT INCLUDED IN TEMPLATE -->
-<script type="text/javascript">
-    (function (d, w, c) {
-        (w[c] = w[c] || []).push(function() {
-            try {
-                w.yaCounter25836617 = new Ya.Metrika({id:25836617,
-                    webvisor:true,
-                    accurateTrackBounce:true});
-            } catch(e) { }
-        });
-
-        var n = d.getElementsByTagName("script")[0],
-            s = d.createElement("script"),
-            f = function () { n.parentNode.insertBefore(s, n); };
-        s.type = "text/javascript";
-        s.async = true;
-        s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
-
-        if (w.opera == "[object Opera]") {
-            d.addEventListener("DOMContentLoaded", f, false);
-        } else { f(); }
-    })(document, window, "yandex_metrika_callbacks");
-</script>
 
 </body>
 </html>
